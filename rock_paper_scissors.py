@@ -29,7 +29,7 @@ def user_play(play):
     if play_is_valid:
         return print_hand(i)
     else:
-        return print("The input entered isn't valid.\nPlease be sure to enter 'rock', 'paper' or 'scissors'.")
+        return print_hand(-1)
 
 def computer_play():
     return print_hand(random.randint(0,2))
@@ -69,8 +69,11 @@ def print_hand(play):
         print(f"Player has chosen: ROCK\n{rock}")
     elif play == 1:
         print(f"Player has chosen: PAPER\n{paper}")
-    else:
+    elif play == 2:
         print(f"Player has chosen: SCISSORS\n{scissors}")
+    else:
+        print("The input entered isn't valid.\nPlease be sure to enter 'rock', 'paper' or 'scissors'.")
+
 
 
 if __name__ == '__main__':
