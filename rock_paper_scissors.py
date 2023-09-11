@@ -8,7 +8,7 @@ def read_user_play():
         description="Allows the player to play 'Rock, paper and scissors' on the terminal"
     )
     parser.add_argument(
-        "play", nargs=1, type=str, help="enter option 'rock', 'paper' or 'scissors'"
+        "play", nargs='?', type=str, help="enter option 'rock', 'paper' or 'scissors'"
     )
     """
     parser.add_argument(
@@ -21,16 +21,16 @@ def read_user_play():
     return parser.parse_args()
 
 def play_validation(play):
-    play[0] = play[0].upper()
+    play = play.upper()
     for option in POSSIBLE_PLAYS:
-        if play[0] == option:
+        if play == option:
             return True
     return False
 
 def user_play(play):
-    play[0] = play[0].upper()
+    play = play.upper()
     for i in range(len(POSSIBLE_PLAYS)):
-        if play[0] == POSSIBLE_PLAYS[i]:
+        if play == POSSIBLE_PLAYS[i]:
             return i
 
 def computer_play():
