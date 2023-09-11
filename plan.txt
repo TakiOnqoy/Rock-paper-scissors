@@ -1,0 +1,10 @@
+Rock paper & scissors app!
+
+    if play == 0:
+        print(f"Player has chosen: ROCK\n{rock}")
+    elif play == 1:
+        print(f"Player has chosen: PAPER\n{paper}")
+    elif play == 2:
+        print(f"Player has chosen: SCISSORS\n{scissors}")
+    else:
+        print(f"The input entered isn't valid.\nPlease be sure to enter 'rock', 'paper' or 'scissors'.")
